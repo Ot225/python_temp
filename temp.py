@@ -7,4 +7,9 @@ def readTemp():
     temp = fo.read()
     return int(temp)*0.001
  
-print(readTemp())
+def averageTemp(n)
+    sum=0
+    for i in range(n):
+        sum = sum+readTemp()
+        average=sum/n
+        return average
