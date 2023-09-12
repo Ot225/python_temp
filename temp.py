@@ -1,7 +1,10 @@
 #! /usr/bin/python
 TEMP_PATH="/sys/class/thermal/thermal_zone0/"
 
-fo = open(TEMP_PATH + "temp" , "r")
+def readTemp():
 
-temp = fo.read()
-print(temp)
+    fo = open(TEMP_PATH + "temp" , "r")
+    temp = fo.read()
+    return int(temp)*0.001
+ 
+print(readTemp())
